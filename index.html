@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Taste &amp; Craving | India's Sweetest Street Experience</title>
+    <meta name="description"
+        content="Premium mini pancakes, waffles and shakes served fresh on the street. India's sweetest urban street food experience. Order now at Taste & Craving." />
+    <meta property="og:title" content="Taste & Craving | India's Sweetest Street Experience" />
+    <meta property="og:description"
+        content="Premium mini pancakes, waffles and shakes served fresh. India's sweetest urban street food experience." />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-nav-overlay"></div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+        <div class="flex items-center justify-between mb-4">
+            <span class="font-headline font-black text-xl text-primary italic">Taste &amp; Craving</span>
+            <button id="mobile-nav-close"
+                onclick="document.getElementById('mobile-nav').classList.remove('open'); document.getElementById('mobile-nav-overlay').classList.remove('open'); document.body.style.overflow='';"
+                class="material-symbols-outlined text-on-surface-variant">close</button>
+        </div>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="menu.html"
+            class="mt-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-3 rounded-full text-center text-sm">Order
+            Now</a>
+    </div>
+
+    <!-- Top Navigation -->
+    <header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 z-50 shadow-sm dark:shadow-none">
+        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html"
+                class="text-2xl font-black text-primary dark:text-primary-container flex items-center gap-2">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+                <span class="font-headline tracking-tight italic">Taste &amp; Craving</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-primary dark:text-primary-container border-b-2 border-primary font-bold pb-1 transition-all duration-300"
+                    href="index.html">Home</a>
+                <a class="text-tertiary dark:text-tertiary-fixed font-medium hover:text-primary transition-all duration-300"
+                    href="menu.html">Menu</a>
+                <a class="text-tertiary dark:text-tertiary-fixed font-medium hover:text-primary transition-all duration-300"
+                    href="offers.html">Offers</a>
+                <a class="text-tertiary dark:text-tertiary-fixed font-medium hover:text-primary transition-all duration-300"
+                    href="about.html">About</a>
+                <a class="text-tertiary dark:text-tertiary-fixed font-medium hover:text-primary transition-all duration-300"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="cart.html" aria-label="View cart"
+                    class="relative material-symbols-outlined text-on-surface-variant hover:text-primary transition-transform active:scale-90">
+                    shopping_cart
+                    <span
+                        class="cart-badge absolute -top-1 -right-1 bg-primary text-on-primary text-xs font-black w-4 h-4 rounded-full items-center justify-center hidden">0</span>
+                </a>
+                <a href="menu.html"
+                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-full scale-95 active:scale-90 transition-transform shadow-md">
+                    Order Now
+                </a>
+                <!-- Hamburger (mobile only) -->
+                <button type="button" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"
+                    class="md:hidden material-symbols-outlined text-on-surface hover:text-primary transition-colors">
+                    menu
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section: The Street Pulse -->
+        <section class="relative overflow-hidden pt-12 pb-24 md:pt-20 md:pb-32 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative z-10 order-2 md:order-1">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-md font-bold mb-6">NEW
+                        STREET ARRIVAL</span>
+                    <h1
+                        class="font-headline text-6xl md:text-8xl font-black text-on-surface leading-[0.9] tracking-tighter mb-8">
+                        India's <span class="text-primary italic">Sweetest</span> Street <br />Experience
+                    </h1>
+                    <p class="text-body-lg text-on-surface-variant max-w-md mb-10 leading-relaxed">
+                        Ditch the fine dining. Embrace the hustle. Premium mini pancakes and signature waffles crafted
+                        for the urban soul.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="menu.html"
+                            class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
+                            Grab Your Crave
+                        </a>
+                        <a href="menu.html"
+                            class="px-8 py-4 rounded-full border-2 border-outline-variant font-bold text-on-surface hover:bg-surface-container-low transition-colors">
+                            Explore Menu
+                        </a>
+                    </div>
+                </div>
+                <div class="relative order-1 md:order-2">
+                    <div class="relative w-full aspect-square">
+                        <!-- Abstract Shapes -->
+                        <div class="absolute inset-0 bg-primary-container/10 rounded-full blur-3xl -z-10 animate-pulse">
+                        </div>
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border-2 border-dashed border-primary/20 rounded-full animate-spin-slow">
+                        </div>
+                        <!-- Hero Images with Overlap -->
+                        <div
+                            class="absolute top-0 right-0 w-3/4 h-3/4 rounded-xl overflow-hidden shadow-2xl z-20 float-anim">
+                            <img class="w-full h-full object-cover"
+                                alt="Close-up of golden brown mini pancakes drizzled with rich dark chocolate and sprinkled with powdered sugar on a vibrant plate"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZCWpiATAnbbnC0_DwiwF8JKNdu1YETthAdFQ5H2QXdOb3vm97Ao3QMuOGB9PtqiYHnbO7dBahh14JbuB_O8HVfB6htBnDynoM0voCAdU88B0Uqw2QlSjGtsvH8ha9pFCjzh15OYyxnv11rxFED6NH20QPt7_8WONrj-tb0qhIJxvW9NeXx4OgdV1kiIP5rLncqqZNo2fxdr27-yHwTrZazmSmGK9x7L1cQua8pRkZzg1hqN6wZNKZO4b8XkCFo1-Xp4ojhz929kA" />
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-2/3 h-2/3 rounded-xl overflow-hidden shadow-2xl z-30 offset-image">
+                            <img class="w-full h-full object-cover"
+                                alt="Crispy belgian waffle topped with fresh whipped cream and vibrant strawberries set against a dark textured background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLRFGa-ZG7nb0928zAfohJIPnImeUjYKBVzg1EPMMDMFURa3wDxP3UEGY5_APRfpeNXEJopfuCqlGxK24uae94JKhhtJjGsWBl8cHn-YKGowpN0L4lowasNO632bhy1mzveHWAy4vAyhLHMnYmq9LtUZUpUVIeBS37mm-7-bq_uix7X-1cjavN43FP84ytMltdBXkPU2EJQmWS2Y20yN7WAJ3fpJAYQMdPf1CZebvOxw9RLmQYNojjs9se29Dq1vGgaAojzFL_GBM" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-surface-container-low py-16 px-6">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between gap-12">
+                <div class="text-center group">
+                    <p
+                        class="text-5xl font-black font-headline text-primary mb-2 group-hover:scale-110 transition-transform">
+                        10k+</p>
+                    <p class="text-label-md font-bold text-tertiary uppercase tracking-widest">Waffles Served</p>
+                </div>
+                <div class="text-center group">
+                    <p
+                        class="text-5xl font-black font-headline text-primary mb-2 group-hover:scale-110 transition-transform">
+                        15k+</p>
+                    <p class="text-label-md font-bold text-tertiary uppercase tracking-widest">Pancake Hits</p>
+                </div>
+                <div class="text-center group">
+                    <p
+                        class="text-5xl font-black font-headline text-primary mb-2 group-hover:scale-110 transition-transform">
+                        8k+</p>
+                    <p class="text-label-md font-bold text-tertiary uppercase tracking-widest">Killer Shakes</p>
+                </div>
+                <div class="text-center group">
+                    <p
+                        class="text-5xl font-black font-headline text-primary mb-2 group-hover:scale-110 transition-transform">
+                        5k+</p>
+                    <p class="text-label-md font-bold text-tertiary uppercase tracking-widest">Happy Addicts</p>
+                </div>
+                <div class="text-center group">
+                    <p
+                        class="text-5xl font-black font-headline text-primary mb-2 group-hover:scale-110 transition-transform">
+                        3+</p>
+                    <p class="text-label-md font-bold text-tertiary uppercase tracking-widest">Hub Locations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Menu: Bento-style Grid -->
+        <section class="py-24 px-6 bg-surface">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div>
+                        <h2 class="font-headline text-5xl font-black text-on-surface mb-4">The Street Hall of Fame</h2>
+                        <p class="text-body-lg text-on-surface-variant">Our most viral indulgences, ranked by your
+                            cravings.</p>
+                    </div>
+                    <a href="menu.html" class="text-primary font-bold flex items-center gap-2 group">
+                        View Full Menu
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Card 1: Nutella Waffle -->
+                    <div
+                        class="bg-surface-container-lowest rounded-lg p-4 group transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/5">
+                        <div class="rounded-lg overflow-hidden h-64 mb-6 bg-surface-container-low">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Close-up of a warm belgian waffle smothered in thick hazelnut chocolate spread and crushed hazelnuts"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQvQ5dpgBIedMGQpuYOzc7oB7pEm_usSDmNPpOqy6-R_N6cPFq5TMg5pm_cvDRjXeoHMKK2ElUdpiUYFsjraNFC5ultOIQoV0D0tJoMkO0LQzlblgc2XF4a0c7wybVHRvXJza2Or75I3LS3dE7DhT0KbTsCgTBpIJXvTznK0vUS3p5TN_a2d99zFsnIXLZCQGGn6OfsM63Ymkf5KAM3d7jBfoXrZwoci6jc8FeHSGx86-fd3nh-DbIv3N9KKXDjSLSczCAd28agic" />
+                        </div>
+                        <div class="px-2">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-headline text-2xl font-bold">Nutella Waffles</h3>
+                                <span class="text-primary font-bold">₹180</span>
+                            </div>
+                            <p class="text-on-surface-variant text-body-md mb-6 line-clamp-2">Crispy signature batter
+                                loaded with pure Nutella and caramel crunch.</p>
+                            <button type="button"
+                                class="add-btn w-full py-3 rounded-full bg-surface-container-highest font-bold text-on-surface hover:bg-primary hover:text-white transition-colors"
+                                data-item="Nutella Waffles" data-price="180">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 2: KitKat Waffle -->
+                    <div
+                        class="bg-surface-container-lowest rounded-lg p-4 group transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/5">
+                        <div class="rounded-lg overflow-hidden h-64 mb-6 bg-surface-container-low">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Stacked waffles with milk chocolate syrup and broken pieces of kitkat chocolate bar"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfPW3DwIvb0Xj8Oaiuo_KndIx-Yx5YcwAV9dGlO8_sntrTnufGGk_pzVKbj3dCAocPrZMwKovd3TK4S8ro6yuqzP1Rno79e_V1iz9B_5yuiyMiV6tlqzI9gokbAebbrwOUzoaj084s2VHDu8214gM703ff0P6r32_zjlww5tjpvJj4dEHnEcbRntKJ2iz3UoZH1VE4hqrgvFSfxrvjM2ObON7n_-Klo2Z4yANosCSTytbapcb8_o7SuMVbhSgQ1XUz3uwSYBG4INs" />
+                        </div>
+                        <div class="px-2">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-headline text-2xl font-bold">KitKat Waffles</h3>
+                                <span class="text-primary font-bold">₹160</span>
+                            </div>
+                            <p class="text-on-surface-variant text-body-md mb-6 line-clamp-2">The ultimate crunch
+                                experience. Double layered milk chocolate.</p>
+                            <button type="button"
+                                class="add-btn w-full py-3 rounded-full bg-surface-container-highest font-bold text-on-surface hover:bg-primary hover:text-white transition-colors"
+                                data-item="KitKat Waffles" data-price="160">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 3: Oreo Shake -->
+                    <div
+                        class="bg-surface-container-lowest rounded-lg p-4 group transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/5">
+                        <div class="rounded-lg overflow-hidden h-64 mb-6 bg-surface-container-low">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Thick milkshake with oreo crumbles and whipped cream topped with a whole oreo cookie"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr4F1nER6Jr_EgDQWH-nH-kyT00XRsNos0LelpCMWxutRthejVbYmHZffyIPwh0PeU_8WlTEkJShsgK8yEhNYRiXjPsXxfbPLo8gEp5jl_0c34aS0DPC5jAPAxB220w9kZL61DZSFwRhc22Dn4RpN3gojPWzk7GG8o4PVmYu1HFJ0gw4b6DJvCENb8DK2fM9Uuph4Vz4OGPHxei209Nv76LqBgRHdOz9kjZl5cVLrl7UWnYC0wZ3yLyGYjnHdsF2EYpETiqFQO7c8" />
+                        </div>
+                        <div class="px-2">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-headline text-2xl font-bold">Oreo Shakes</h3>
+                                <span class="text-primary font-bold">₹220</span>
+                            </div>
+                            <p class="text-on-surface-variant text-body-md mb-6 line-clamp-2">Thick, creamy, and loaded
+                                with dark cocoa cookie bliss.</p>
+                            <button type="button"
+                                class="add-btn w-full py-3 rounded-full bg-surface-container-highest font-bold text-on-surface hover:bg-primary hover:text-white transition-colors"
+                                data-item="Oreo Shakes" data-price="220">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 4: Nutella Mini Pancakes -->
+                    <div
+                        class="bg-surface-container-lowest rounded-lg p-4 group transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-primary/5">
+                        <div class="rounded-lg overflow-hidden h-64 mb-6 bg-surface-container-low">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Twelve fluffy mini pancakes in a takeaway container dripping with melted chocolate"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQwZNyDwyaWI20S9pyeR_1VagAi1dL33r8uu_oAe7NYxrWrGQD0lvuzUJju1MdqBHTcPWYfGG2p-hopwhJarPVJ9Th-RfQkognWZSKcxwq2KdWvVn9ANE9L6ksXLOmP5AubD0cIR5WLetr0Ej83QDMGlcUqMngg6uSVooZbfrksXg7Rynj9tqPAHxGuRAQGijfgeswfa_AwGXCw7pTF8BgWztMEnfKBQLzZr9bXUJoKu3PnKKlVJImfn8k52jpLu72jheTwpQlrJ4" />
+                        </div>
+                        <div class="px-2">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-headline text-2xl font-bold">Mini Nutella</h3>
+                                <span class="text-primary font-bold">₹140</span>
+                            </div>
+                            <p class="text-on-surface-variant text-body-md mb-6 line-clamp-2">Bite-sized heaven. Twelve
+                                pieces of fluffy joy.</p>
+                            <button type="button"
+                                class="add-btn w-full py-3 rounded-full bg-surface-container-highest font-bold text-on-surface hover:bg-primary hover:text-white transition-colors"
+                                data-item="Mini Nutella Pancakes" data-price="140">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animated Offers Banner -->
+        <section class="px-6">
+            <div
+                class="max-w-7xl mx-auto bg-gradient-to-r from-primary-container to-primary rounded-xl overflow-hidden py-12 px-12 relative">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl">
+                </div>
+                <div class="relative z-10 flex flex-col md:flex-row justify-between items-center text-on-primary gap-8">
+                    <div class="text-center md:text-left">
+                        <span
+                            class="bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1 rounded-full font-bold text-sm mb-4 inline-block">STREET
+                            SPECIAL</span>
+                        <h2 class="text-4xl md:text-5xl font-black font-headline mb-2 uppercase tracking-tight">Buy 2
+                            Waffles &amp; Get 1 Mocktail <span class="text-tertiary-fixed">FREE</span></h2>
+                        <p class="text-on-primary/80 font-medium">Valid all weekends at all our urban hubs. Grab it
+                            before it's gone!</p>
+                    </div>
+                    <a href="offers.html"
+                        class="bg-surface text-primary px-10 py-5 rounded-full font-black text-xl hover:scale-105 transition-transform whitespace-nowrap">
+                        Claim Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon / Teaser Grid -->
+        <section class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="font-headline text-4xl font-black mb-12 text-on-surface">Dropping Soon</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Card 1: Waffle Cookies (Neon Glitch Reveal) -->
+                    <style>
+                        @keyframes glitch {
+                            0% {
+                                transform: translate(0)
+                            }
+
+                            20% {
+                                transform: translate(-2px, 2px)
+                            }
+
+                            40% {
+                                transform: translate(-2px, -2px)
+                            }
+
+                            60% {
+                                transform: translate(2px, 2px)
+                            }
+
+                            80% {
+                                transform: translate(2px, -2px)
+                            }
+
+                            100% {
+                                transform: translate(0)
+                            }
+                        }
+
+                        /* Trigger on Hover OR when Scorlled into view */
+                        .group:hover .glitch-text,
+                        .group.is-in-view .glitch-text {
+                            animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+                        }
+
+                        .neon-line {
+                            transition: width 1s cubic-bezier(0.19, 1, 0.22, 1);
+                        }
+
+                        .group:hover .neon-line,
+                        .group.is-in-view .neon-line {
+                            width: 100%;
+                        }
+
+                        .group:hover .reveal-text,
+                        .group.is-in-view .reveal-text {
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                    </style>
+                    <div class="relative rounded-xl overflow-hidden group h-[450px] bg-black animate-on-scroll shadow-2xl">
+                        <img class="w-full h-full object-cover brightness-[0.85] group-hover:scale-110 transition-transform duration-[4000ms]"
+                            alt="High-quality Waffle Cookies product photography"
+                            src="images/waffle-cookies-drop-v2.jpg" />
+                        <!-- Neon Content Overlay - COMPACT BOTTOM ANCHOR -->
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/95 via-black/80 to-transparent flex flex-col items-center text-center">
+                            <span class="inline-block px-3 py-1 rounded-sm bg-primary text-white text-[9px] font-black mb-3 uppercase tracking-[0.2em] animate-pulse shadow-[0_0_15px_rgba(255,0,0,0.8)]">
+                                NEW DROP
+                            </span>
+                            <h3 class="glitch-text font-black text-4xl md:text-5xl text-white uppercase tracking-tighter leading-none mb-2">
+                                Waffle <span class="text-primary italic">Cookies</span>
+                            </h3>
+                            <div class="neon-line h-1.2 w-0 bg-primary shadow-[0_0_20px_rgba(255,0,0,0.8)] rounded-full mb-4"></div>
+                            <p class="reveal-text text-white/90 text-sm font-medium max-w-xs transform translate-y-3 opacity-0 transition-all duration-700 delay-300">
+                                Milk chocolate flavour sweetness is hitting the streets.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Peri-Peri Makhana -->
+                    <div class="relative h-[450px] rounded-xl overflow-hidden group animate-on-scroll">
+                        <img class="w-full h-full object-cover brightness-50 group-hover:scale-105 transition-transform duration-1000"
+                            alt="Crispy loaded makhana in urban street style container"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIXHGRreLta-GyJcoVvFD49iane7aM5IWAQ8uPbkpUh8hRdom53slFON3xsTjniD2h9-kv_JS9niBaeGpICLMByK0gaERrz45CUJ5W1FIUQHpu4OBIAlScNlm8IpNHWhYqGIGqCNRyYkgRwG2hdT1MFMX6gINJ7KDVHEfYd0B_IYw54OOHixcGP0dLISRLxQMPSpIrVX5aEMzN2qT_t5jz4R3If2dXV4xdNz4rzpLcoyFhhmEOwqL2QSUJJ-1f82A_pofpqo0" />
+                        <div class="absolute bottom-0 left-0 w-full p-8 flex flex-col items-center text-center bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                            <span class="inline-block px-3 py-1 rounded-sm bg-tertiary-fixed text-on-tertiary-fixed text-[9px] font-black mb-3 uppercase tracking-[0.2em] animate-pulse">SAVORY TWIST</span>
+                            <h3 class="glitch-text font-black text-4xl md:text-5xl text-white uppercase tracking-tighter leading-none mb-2">Peri-Peri <span class="text-tertiary-fixed italic">Makhana</span></h3>
+                            <div class="neon-line h-1.2 w-0 bg-tertiary-fixed shadow-[0_0_15px_rgba(255,255,0,0.4)] rounded-full mb-4"></div>
+                            <p class="reveal-text text-white/80 text-sm font-medium max-w-xs transform translate-y-3 opacity-0 transition-all duration-700 delay-300">Breaking the sweetness with urban salt &amp; spice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wall of Fame (Reviews) -->
+        <section class="py-24 px-6 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="font-headline text-5xl font-black text-center mb-16">The Real Talk</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review Card -->
+                    <div class="bg-surface p-8 rounded-lg shadow-sm">
+                        <div class="flex gap-1 text-primary mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-body-lg text-on-surface mb-6 italic">"The KitKat waffle is literally life
+                            changing. The crunch is real and the vibe is unmatched!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-secondary-container"></div>
+                            <div>
+                                <p class="font-bold text-on-surface">Arjun Sharma</p>
+                                <p class="text-sm text-on-surface-variant">Street Food Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review Card -->
+                    <div class="bg-surface p-8 rounded-lg shadow-sm border-t-4 border-primary">
+                        <div class="flex gap-1 text-primary mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-body-lg text-on-surface mb-6 italic">"Better than any high-end bakery. The mini
+                            pancakes are the perfect post-work reward."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-secondary-container"></div>
+                            <div>
+                                <p class="font-bold text-on-surface">Priya Kapur</p>
+                                <p class="text-sm text-on-surface-variant">Casual Foodie</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review Card -->
+                    <div class="bg-surface p-8 rounded-lg shadow-sm">
+                        <div class="flex gap-1 text-primary mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-body-lg text-on-surface mb-6 italic">"Taste &amp; Craving is the only reason I
+                            head to the market. Pure, unadulterated sweetness."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-secondary-container"></div>
+                            <div>
+                                <p class="font-bold text-on-surface">Rahul V.</p>
+                                <p class="text-sm text-on-surface-variant">Tech Lead @ Swiggy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Feed -->
+        <section class="py-24 px-6 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline text-4xl font-black mb-2 italic text-tertiary">#taste_craving</h2>
+                    <p class="text-on-surface-variant">Follow the hustle. Tag us to get featured.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                    <div class="aspect-square rounded-lg overflow-hidden relative group">
+                        <img class="w-full h-full object-cover"
+                            alt="Vibrant dessert photo with bright lighting and urban aesthetic"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn9QdqLJxZttCoBh6RfGDEkkJUlUHrsspnXx0msHp-i_lB2CZ_dLSClbk2AFKar_hlVXX5_QqNADH7qONyRXnp2bo14bG-jxVzV7yI2JTc_fr9EG1NteTucOVSOYHZiB0Drmcd3fvb9mV-8eojm9SnLCmqkRUffzdAFkaOTVNxTgWJ46YDKdJF69VWJnDhtRH8wFRoukRGMb1m-7t9h3Pf3rGYa7Vs4OBJNv5n8RXXC45xpUCfkBbZpi-8d9e9Xk_ocqFZuDcNfPw" />
+                        <div
+                            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="material-symbols-outlined text-white text-4xl">photo_camera</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden relative group">
+                        <img class="w-full h-full object-cover"
+                            alt="A thick chocolate milkshake with whipped cream and chocolate drizzle"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMOpHAi4k_LEilTBFyru34jb_SalQyWYLJir-Ducwm5Q67yvenxdf39UIcyHuavnRQXNRwDPWMj0FozsS-pSUL874MmO_LwEg9zXPVQv4lHkrg2BOPHrLX5wMHQTsHJriETHm345AZpM1dWVS1lHtTAcnJE3Rf2NwnFjdC_bGD_DAJInV2AJ8DsO5rjLc4GW5z9rtMY_yDKVI5pWimDg3T6pWkc8mck14W20GQPGjA1RcvvwrskFHt7wow8lFuFF2KI0HWCb0Hw54" />
+                        <div
+                            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="material-symbols-outlined text-white text-4xl">photo_camera</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden relative group">
+                        <img class="w-full h-full object-cover"
+                            alt="Close-up of fluffy pancakes being served on the street"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz66zIK7rBZYVQfzTHbFbje7w4zQAGljhr0oUKhOFPLRvxZL3TkMWh66GCpPYHhPUaPZWLk8U99kjefjRCY-NiH9NdN4BRFS9VT3McYXs2oZsfBnvI_DkSWD4wI22WSyCR1IclJ5bIqU994goDKJWs06cNU3Qy-wrVDenEoUMcet2NRrKs-zsjrzvDti3-YvDgP0sh81caGhv4g2VOF4BhaIRIvsMyx72lZz_pBFZpdfsW51cuQs_GMpGydmX6S3DsLExpd0ZKk9A" />
+                        <div
+                            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="material-symbols-outlined text-white text-4xl">photo_camera</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden relative group">
+                        <img class="w-full h-full object-cover"
+                            alt="A tray of chocolate dipped street desserts with colorful toppings"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNc0XIjrNujf99aCx-EotOjPwNUd5wSeOLrBSMuZLMkAIO08fgmClC3Sc10AdVWjb3woEV7RiKpHcjkFH2HQkGMH4vsyNVzvsNnQZuPr9tX0Eu_iztiofqRUKyjz2-qX93OtpYkaeMT3r3Av1UlwLIxI5m14dI74C04d3W-IpYiHWS6DDdd-4Ug2I-4EaaFAh-rFTGHBY3F6U7TyVHqvR0ml7OV5OEjTokdreeYzLB7p-sr0uo5vul3QR6ipv25IEzcgf900nYcsA" />
+                        <div
+                            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="material-symbols-outlined text-white text-4xl">photo_camera</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden relative group">
+                        <img class="w-full h-full object-cover" alt="Neon street sign of a dessert shop at night"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKs8n15OWbZmkCxcK29xBu_50IC2yXGRxNG3LJc49_6Fa4dmK2UMlIUN5O_bnoD4sDhcc7l8Kx-hP5F2CGfOD1RNE4y1d82EndcS2syMS7WasM402n29BBI2e6QNzuiztXkUG7fpnGbpuD2NZObWLc88jdqzIg-LfUWMGUB6a37mJfkZPpIS6B9iiUNLWyN1sdOan3d5fS2_nNJV6_wU1KalZ7Me4eYkMPwQfVk-P7oOcAtNla10YF-APgVxLFhKTskM7midkyQP4" />
+                        <div
+                            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="material-symbols-outlined text-white text-4xl">photo_camera</span>
+                        </div>
+                    </div>
+                    <div class="aspect-square rounded-lg overflow-hidden relative group">
+                        <img class="w-full h-full object-cover"
+                            alt="Street food packaging with mini pancakes and melting chocolate"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvOTlJtz7EUL9Uj2_G-V8U8-H63L-_ivNLY2jDqewhHQx82yy_hvXRTsBM4BunKBwc2QpQ27tXuuBPBS_wLi4kPZ2uG3nOlxvHkjuXOSxjc6CigIU3JN2LQTH63n4hNMHLT7vGGz66vPjAr03IypepGc3B8dBnTOm9CYIrgNQqKf4wSVqNqKBQdeAEcVE8413jVl_lAQzqY5stikCegr_qG9n8dx7AlyuvsYzDVrgi8g3YT3Ibzxuf0UzfkEs95qhlfM0Mt4x5j2g" />
+                        <div
+                            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="material-symbols-outlined text-white text-4xl">photo_camera</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low dark:bg-surface-container-lowest mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-16 max-w-7xl mx-auto">
+            <div class="flex flex-col gap-4">
+                <span class="text-3xl font-black text-tertiary italic">Taste &amp; Craving</span>
+                <p class="text-body-lg text-on-surface-variant">The original urban sweet experience. Bringing premium
+                    street treats to every corner.</p>
+                <div class="flex gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">photo_camera</span>
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">chat</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-on-surface mb-6">Explore</h4>
+                <ul class="flex flex-col gap-4">
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="index.html">Home</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="menu.html">Menu</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="offers.html">Offers</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="about.html">About</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-on-surface mb-6">Contact Us</h4>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-center gap-2 text-tertiary">
+                        <span class="material-symbols-outlined text-sm">call</span>
+                        <a href="tel:8800354992" class="hover:text-primary transition-colors">8800354992</a>
+                    </li>
+                    <li class="flex items-center gap-2 text-tertiary">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                        <a href="mailto:hello@tastecraving.com"
+                            class="hover:text-primary transition-colors">hello@tastecraving.com</a>
+                    </li>
+                    <li class="flex items-center gap-2 text-tertiary">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        Cyber City, Gurgaon
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-on-surface mb-6">Street Feed</h4>
+                <p class="text-tertiary mb-4">Instagram: @taste_craving</p>
+                <div class="bg-primary/5 p-4 rounded-lg">
+                    <p class="text-sm italic text-on-surface-variant font-medium">"Waffle of the month: KitKat Blast.
+                        Order yours today!"</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-outline-variant/10 py-8 px-8 text-center">
+            <p class="text-body-lg text-tertiary">© <span class="copyright-year">2025</span> Taste &amp; Craving. Street
+                Sweet Editorial.</p>
+        </div>
+    </footer>
+
+    <!-- FAB for quick order on mobile -->
+    <div class="fixed bottom-8 right-8 md:hidden z-50">
+        <a href="menu.html"
+            class="bg-primary text-on-primary w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform">
+            <span class="material-symbols-outlined text-3xl"
+                style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
