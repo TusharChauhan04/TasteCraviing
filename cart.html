@@ -40,9 +40,9 @@
 
     <!-- Header -->
     <header class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-            <a href="index.html" class="text-2xl font-black text-primary flex items-center gap-2">
-                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+        <nav class="flex justify-between items-center w-full px-4 md:px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="text-xl md:text-2xl font-black text-primary flex items-center gap-1.5 md:gap-2">
+                <span class="material-symbols-outlined !text-[20px] md:!text-[24px]" style="font-variation-settings: 'FILL' 1;">restaurant</span>
                 <span class="font-headline tracking-tight italic">Taste &amp; Craving</span>
             </a>
             <div class="hidden md:flex items-center gap-8">
@@ -52,14 +52,14 @@
                 <a class="text-tertiary font-medium hover:text-primary transition-all duration-300" href="about.html">About</a>
                 <a class="text-tertiary font-medium hover:text-primary transition-all duration-300" href="contact.html">Contact</a>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3 md:gap-4">
                 <a href="cart.html" aria-label="Your cart"
                     class="relative material-symbols-outlined text-primary hover:text-primary-container transition-colors">
                     shopping_cart
-                    <span class="cart-badge absolute -top-1 -right-1 bg-primary text-on-primary text-xs font-black w-4 h-4 rounded-full items-center justify-center hidden">0</span>
+                    <span class="cart-badge absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-black w-3.5 h-3.5 flex items-center justify-center hidden">0</span>
                 </a>
                 <a href="menu.html"
-                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-full active:scale-90 transition-transform shadow-md">
+                    class="hidden md:inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-full active:scale-90 transition-transform shadow-md">
                     + Add Items
                 </a>
                 <button type="button" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"
@@ -80,7 +80,7 @@
                     Back to Menu
                 </a>
             </div>
-            <h1 class="font-headline text-5xl md:text-7xl font-black text-on-surface tracking-tighter leading-none">
+            <h1 class="font-headline text-5xl md:text-7xl font-black text-on-surface tracking-tighter leading-[1.1] md:leading-none">
                 Your <span class="text-primary italic">Cart</span>
             </h1>
             <p id="cart-item-count" class="text-on-surface-variant font-medium mt-2 text-lg">0 items</p>
@@ -144,7 +144,7 @@
 
                 <!-- Right: Order Summary -->
                 <div class="lg:col-span-1">
-                    <div class="bg-surface-container-low rounded-2xl p-8 space-y-6 sticky top-[100px]">
+                    <div class="bg-surface-container-low rounded-2xl p-6 md:p-8 space-y-6 sticky top-[100px]">
                         <h2 class="font-headline text-2xl font-bold text-on-surface">Order Summary</h2>
 
                         <!-- Price Breakdown -->

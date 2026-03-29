@@ -49,10 +49,10 @@
 
     <!-- TopNavBar -->
     <header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 z-50 shadow-sm dark:shadow-none">
-        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+        <nav class="flex justify-between items-center w-full px-4 md:px-6 py-4 max-w-7xl mx-auto">
             <a href="index.html"
-                class="text-2xl font-black text-primary dark:text-primary-container flex items-center gap-2">
-                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+                class="text-xl md:text-2xl font-black text-primary dark:text-primary-container flex items-center gap-1.5 md:gap-2">
+                <span class="material-symbols-outlined !text-[20px] md:!text-[24px]" style="font-variation-settings: 'FILL' 1;">restaurant</span>
                 <span class="font-headline italic tracking-tighter">Taste &amp; Craving</span>
             </a>
             <div class="hidden md:flex gap-8 items-center">
@@ -67,15 +67,15 @@
                 <a class="text-tertiary dark:text-tertiary-fixed font-medium hover:text-primary transition-all duration-300"
                     href="contact.html">Contact</a>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3 md:gap-4">
                 <a href="cart.html" aria-label="View cart"
                     class="relative material-symbols-outlined text-primary scale-95 active:scale-90 transition-transform">
                     shopping_cart
                     <span
-                        class="cart-badge absolute -top-1 -right-1 bg-primary text-on-primary text-xs font-black w-4 h-4 rounded-full items-center justify-center hidden">0</span>
+                        class="cart-badge absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-black w-3.5 h-3.5 flex items-center justify-center hidden">0</span>
                 </a>
                 <a href="menu.html"
-                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold scale-95 active:scale-90 transition-transform shadow-lg shadow-primary/20">
+                    class="hidden md:inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold scale-95 active:scale-90 transition-transform shadow-lg shadow-primary/20">
                     Order Now
                 </a>
                 <!-- Hamburger (mobile only) -->
@@ -100,7 +100,7 @@
                         Limited Indulgence
                     </div>
                     <h1
-                        class="font-headline text-display-lg md:text-7xl font-black text-on-surface leading-[0.9] tracking-tighter">
+                        class="font-headline text-5xl md:text-7xl font-black text-on-surface leading-[1.1] md:leading-[0.9] tracking-tighter">
                         Indulgence, <br />
                         <span class="text-primary italic">Now On Offer.</span>
                     </h1>

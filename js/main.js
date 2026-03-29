@@ -197,35 +197,42 @@ function renderCartPage() {
 
     // Build the items list HTML
     itemsList.innerHTML = cartItems.map(item => `
-        <div class="cart-item flex items-center gap-6 bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10" data-id="${item.id}">
-            <!-- Icon placeholder -->
-            <div class="w-20 h-20 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings:'FILL' 1">breakfast_dining</span>
+        <div class="cart-item relative grid grid-cols-[auto_1fr] md:flex md:items-center gap-x-4 gap-y-3 md:gap-6 bg-surface-container-lowest p-4 md:p-5 rounded-xl border border-outline-variant/10" data-id="${item.id}">
+            <!-- Icon placeholder - Hide on tiny screens if needed, or keep small -->
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl md:text-3xl text-primary" style="font-variation-settings:'FILL' 1">breakfast_dining</span>
             </div>
+            
             <!-- Info -->
-            <div class="flex-1 min-w-0">
-                <h3 class="font-headline font-bold text-xl text-on-surface truncate">${item.name}</h3>
-                <p class="text-primary font-black text-lg mt-1">₹${item.price.toFixed(0)} <span class="text-on-surface-variant font-normal text-sm">each</span></p>
+            <div class="flex-1 min-w-0 pr-8 md:pr-0">
+                <h3 class="font-headline font-bold text-lg md:text-xl text-on-surface truncate">${item.name}</h3>
+                <p class="text-primary font-black text-base md:text-lg mt-0.5 md:mt-1">₹${item.price.toFixed(0)} <span class="text-on-surface-variant font-normal text-xs md:text-sm">each</span></p>
             </div>
-            <!-- Qty Controls -->
-            <div class="flex items-center gap-3 shrink-0">
-                <button type="button"
-                    class="qty-btn w-9 h-9 rounded-full bg-surface-container-highest text-on-surface font-black text-lg flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all active:scale-90"
-                    data-id="${item.id}" data-delta="-1" aria-label="Decrease quantity">−</button>
-                <span class="qty-display w-6 text-center font-black text-on-surface text-lg">${item.qty}</span>
-                <button type="button"
-                    class="qty-btn w-9 h-9 rounded-full bg-surface-container-highest text-on-surface font-black text-lg flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all active:scale-90"
-                    data-id="${item.id}" data-delta="1" aria-label="Increase quantity">+</button>
+
+            <!-- Qty Controls & Line Total - Stacks on mobile, row on desktop -->
+            <div class="col-start-2 flex flex-wrap items-center justify-between md:justify-end gap-4 md:gap-6 mt-1 md:mt-0">
+                <!-- Qty Controls -->
+                <div class="flex items-center gap-3 bg-surface-container-high md:bg-transparent px-2 md:px-0 py-1 md:py-0 rounded-full shrink-0">
+                    <button type="button"
+                        class="qty-btn w-8 h-8 md:w-9 md:h-9 rounded-full bg-surface-container-highest text-on-surface font-black text-lg flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all active:scale-90"
+                        data-id="${item.id}" data-delta="-1" aria-label="Decrease quantity">−</button>
+                    <span class="qty-display w-6 text-center font-black text-on-surface text-base md:text-lg">${item.qty}</span>
+                    <button type="button"
+                        class="qty-btn w-8 h-8 md:w-9 md:h-9 rounded-full bg-surface-container-highest text-on-surface font-black text-lg flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all active:scale-90"
+                        data-id="${item.id}" data-delta="1" aria-label="Increase quantity">+</button>
+                </div>
+                
+                <!-- Line Total -->
+                <div class="text-right shrink-0 min-w-[70px]">
+                    <p class="font-black text-lg md:text-xl text-on-surface">₹${(item.price * item.qty).toFixed(0)}</p>
+                </div>
             </div>
-            <!-- Line Total -->
-            <div class="text-right shrink-0 min-w-[70px]">
-                <p class="font-black text-xl text-on-surface">₹${(item.price * item.qty).toFixed(0)}</p>
-            </div>
-            <!-- Remove -->
+
+            <!-- Remove Button - Positioned absolutely on mobile for cleaner look -->
             <button type="button"
-                class="remove-btn material-symbols-outlined text-on-surface-variant hover:text-error transition-colors active:scale-90 shrink-0"
+                class="remove-btn absolute top-4 right-4 md:static material-symbols-outlined text-on-surface-variant hover:text-error transition-colors active:scale-90 shrink-0"
                 data-id="${item.id}" aria-label="Remove ${item.name}">
-                delete
+                close
             </button>
         </div>
     `).join('');
