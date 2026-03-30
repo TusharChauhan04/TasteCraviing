@@ -6,7 +6,8 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Taste &amp; Craving | Your Cart</title>
-    <meta name="description" content="Review your cart at Taste & Craving. Adjust quantities, remove items and place your order." />
+    <meta name="description"
+        content="Review your cart at Taste & Craving. Adjust quantities, remove items and place your order." />
     <meta name="robots" content="noindex" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind-config.js"></script>
@@ -28,35 +29,46 @@
     <div id="mobile-nav" role="navigation" aria-label="Mobile navigation">
         <div class="flex items-center justify-between mb-4">
             <span class="font-headline font-black text-xl text-primary italic">Taste &amp; Craving</span>
-            <button onclick="document.getElementById('mobile-nav').classList.remove('open'); document.getElementById('mobile-nav-overlay').classList.remove('open'); document.body.style.overflow='';" class="material-symbols-outlined text-on-surface-variant">close</button>
+            <button
+                onclick="document.getElementById('mobile-nav').classList.remove('open'); document.getElementById('mobile-nav-overlay').classList.remove('open'); document.body.style.overflow='';"
+                class="material-symbols-outlined text-on-surface-variant">close</button>
         </div>
         <a href="index.html" class="nav-link">Home</a>
         <a href="menu.html" class="nav-link">Menu</a>
         <a href="offers.html" class="nav-link">Offers</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="menu.html" class="mt-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-3 rounded-full text-center text-sm">Add More Items</a>
+        <a href="menu.html"
+            class="mt-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-3 rounded-full text-center text-sm">Add
+            More Items</a>
     </div>
 
     <!-- Header -->
     <header class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <nav class="flex justify-between items-center w-full px-4 md:px-6 py-4 max-w-7xl mx-auto">
             <a href="index.html" class="text-xl md:text-2xl font-black text-primary flex items-center gap-1.5 md:gap-2">
-                <span class="material-symbols-outlined !text-[20px] md:!text-[24px]" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+                <span class="material-symbols-outlined !text-[20px] md:!text-[24px]"
+                    style="font-variation-settings: 'FILL' 1;">restaurant</span>
                 <span class="font-headline tracking-tight italic">Taste &amp; Craving</span>
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300" href="index.html">Home</a>
-                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300" href="menu.html">Menu</a>
-                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300" href="offers.html">Offers</a>
-                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300" href="about.html">About</a>
-                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300" href="contact.html">Contact</a>
+                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300"
+                    href="index.html">Home</a>
+                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300"
+                    href="menu.html">Menu</a>
+                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300"
+                    href="offers.html">Offers</a>
+                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300"
+                    href="about.html">About</a>
+                <a class="text-tertiary font-medium hover:text-primary transition-all duration-300"
+                    href="contact.html">Contact</a>
             </div>
             <div class="flex items-center gap-3 md:gap-4">
                 <a href="cart.html" aria-label="Your cart"
                     class="relative material-symbols-outlined text-primary hover:text-primary-container transition-colors">
                     shopping_cart
-                    <span class="cart-badge absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-black w-3.5 h-3.5 flex items-center justify-center hidden">0</span>
+                    <span
+                        class="cart-badge absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-black w-3.5 h-3.5 flex items-center justify-center hidden">0</span>
                 </a>
                 <a href="menu.html"
                     class="hidden md:inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-full active:scale-90 transition-transform shadow-md">
@@ -75,12 +87,14 @@
         <!-- Page Title -->
         <div class="mb-12">
             <div class="flex items-center gap-4 mb-2">
-                <a href="menu.html" class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 text-sm font-medium">
+                <a href="menu.html"
+                    class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 text-sm font-medium">
                     <span class="material-symbols-outlined text-sm">arrow_back</span>
                     Back to Menu
                 </a>
             </div>
-            <h1 class="font-headline text-5xl md:text-7xl font-black text-on-surface tracking-tighter leading-[1.1] md:leading-none">
+            <h1
+                class="font-headline text-5xl md:text-7xl font-black text-on-surface tracking-tighter leading-[1.1] md:leading-none">
                 Your <span class="text-primary italic">Cart</span>
             </h1>
             <p id="cart-item-count" class="text-on-surface-variant font-medium mt-2 text-lg">0 items</p>
@@ -92,13 +106,15 @@
                 <!-- Animated empty bowl -->
                 <div class="relative">
                     <div class="w-40 h-40 rounded-full bg-surface-container-low flex items-center justify-center">
-                        <span class="material-symbols-outlined text-[6rem] text-primary/20" style="font-variation-settings:'FILL' 1">shopping_cart</span>
+                        <span class="material-symbols-outlined text-[6rem] text-primary/20"
+                            style="font-variation-settings:'FILL' 1">shopping_cart</span>
                     </div>
                     <div class="absolute inset-0 rounded-full bg-primary/5 animate-ping"></div>
                 </div>
                 <div class="space-y-3 max-w-sm">
                     <h2 class="font-headline text-4xl font-black text-on-surface">Your cart is empty</h2>
-                    <p class="text-on-surface-variant text-lg">Looks like you haven't added any cravings yet. Head to the menu and start stacking!</p>
+                    <p class="text-on-surface-variant text-lg">Looks like you haven't added any cravings yet. Head to
+                        the menu and start stacking!</p>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="menu.html"
@@ -136,7 +152,8 @@
                     <div class="pt-4">
                         <a href="menu.html"
                             class="inline-flex items-center gap-2 text-primary font-bold hover:underline decoration-primary decoration-2 group">
-                            <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                            <span
+                                class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
                             Continue Shopping
                         </a>
                     </div>
@@ -183,22 +200,26 @@
                         <!-- Checkout CTA -->
                         <a href="contact.html"
                             class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-5 rounded-full font-black text-lg shadow-xl shadow-primary/25 hover:scale-[1.02] active:scale-95 transition-transform flex items-center justify-center gap-3">
-                            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">shopping_bag</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings:'FILL' 1">shopping_bag</span>
                             Place Order
                         </a>
 
                         <!-- Trust badges -->
                         <div class="grid grid-cols-3 gap-3 pt-2">
                             <div class="text-center space-y-1">
-                                <span class="material-symbols-outlined text-primary text-xl block" style="font-variation-settings:'FILL' 1">verified</span>
+                                <span class="material-symbols-outlined text-primary text-xl block"
+                                    style="font-variation-settings:'FILL' 1">verified</span>
                                 <p class="text-xs text-on-surface-variant font-medium leading-tight">Fresh Made</p>
                             </div>
                             <div class="text-center space-y-1">
-                                <span class="material-symbols-outlined text-primary text-xl block" style="font-variation-settings:'FILL' 1">local_shipping</span>
+                                <span class="material-symbols-outlined text-primary text-xl block"
+                                    style="font-variation-settings:'FILL' 1">local_shipping</span>
                                 <p class="text-xs text-on-surface-variant font-medium leading-tight">Fast Delivery</p>
                             </div>
                             <div class="text-center space-y-1">
-                                <span class="material-symbols-outlined text-primary text-xl block" style="font-variation-settings:'FILL' 1">payments</span>
+                                <span class="material-symbols-outlined text-primary text-xl block"
+                                    style="font-variation-settings:'FILL' 1">payments</span>
                                 <p class="text-xs text-on-surface-variant font-medium leading-tight">Secure Pay</p>
                             </div>
                         </div>
@@ -213,13 +234,15 @@
                     <h2 class="font-headline text-3xl font-black text-on-surface">You Might Also Crave</h2>
                     <a href="menu.html" class="text-primary font-bold flex items-center gap-1 group text-sm">
                         Full Menu
-                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        <span
+                            class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </a>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                     <!-- Suggest 1 -->
-                    <div class="bg-surface-container-lowest rounded-xl p-5 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5">
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-5 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5">
                         <div class="rounded-lg overflow-hidden h-48 mb-5 bg-surface-container-low">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 alt="Close-up of a warm belgian waffle smothered in thick hazelnut chocolate spread and crushed hazelnuts"
@@ -237,7 +260,8 @@
                     </div>
 
                     <!-- Suggest 2 -->
-                    <div class="bg-surface-container-lowest rounded-xl p-5 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5">
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-5 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5">
                         <div class="rounded-lg overflow-hidden h-48 mb-5 bg-surface-container-low">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 alt="Thick milkshake with oreo crumbles and whipped cream topped with a whole oreo cookie"
@@ -255,7 +279,8 @@
                     </div>
 
                     <!-- Suggest 3 -->
-                    <div class="bg-surface-container-lowest rounded-xl p-5 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5">
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-5 group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5">
                         <div class="rounded-lg overflow-hidden h-48 mb-5 bg-surface-container-low">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 alt="Refreshing mint mojito in a tall glass with lime slices, fresh mint leaves, and plenty of crushed ice"
@@ -280,24 +305,32 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-surface-container-low mt-20">
+    <footer class="bg-surface-container-low dark:bg-surface-container-lowest mt-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-16 max-w-7xl mx-auto">
             <div class="flex flex-col gap-4">
                 <span class="text-3xl font-black text-tertiary italic">Taste &amp; Craving</span>
-                <p class="text-on-surface-variant text-body-lg">The original urban sweet experience. Premium street treats to every corner.</p>
+                <p class="text-on-surface-variant text-body-lg">Street Sweet Editorial. Authentic waffles and shakes
+                    born on the pavement.</p>
                 <div class="flex gap-4">
-                    <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">photo_camera</span>
-                    <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">chat</span>
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">photo_camera</span>
+                    <span
+                        class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">chat</span>
                 </div>
             </div>
             <div>
                 <h4 class="font-bold text-on-surface mb-6">Explore</h4>
                 <ul class="flex flex-col gap-4">
-                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all" href="index.html">Home</a></li>
-                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all" href="menu.html">Menu</a></li>
-                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all" href="offers.html">Offers</a></li>
-                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all" href="about.html">About</a></li>
-                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all" href="contact.html">Contact</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="index.html">Home</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="menu.html">Menu</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="offers.html">Offers</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="about.html">About</a></li>
+                    <li><a class="text-tertiary hover:text-primary hover:underline decoration-primary decoration-2 transition-all"
+                            href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
@@ -305,28 +338,31 @@
                 <ul class="flex flex-col gap-4">
                     <li class="flex items-center gap-2 text-tertiary">
                         <span class="material-symbols-outlined text-sm">call</span>
-                        <a href="tel:8800354992" class="hover:text-primary transition-colors">8800354992</a>
+                        <a href="tel:8800354992" class="hover:text-primary transition-colors">9560027994</a>
                     </li>
                     <li class="flex items-center gap-2 text-tertiary">
                         <span class="material-symbols-outlined text-sm">mail</span>
-                        <a href="mailto:hello@tastecraving.com" class="hover:text-primary transition-colors">hello@tastecraving.com</a>
+                        <a href="mailto:hello@tastecraving.com"
+                            class="hover:text-primary transition-colors">hello@tastecraving.com</a>
                     </li>
                     <li class="flex items-center gap-2 text-tertiary">
                         <span class="material-symbols-outlined text-sm">location_on</span>
-                        Cyber City, Gurgaon
+                        Ghaziabad, Uttar Pradesh
                     </li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-on-surface mb-6">Street Feed</h4>
-                <p class="text-tertiary mb-4">Instagram: @taste_craving</p>
-                <div class="bg-primary/5 p-4 rounded-lg">
-                    <p class="text-sm italic text-on-surface-variant font-medium">"Waffle of the month: KitKat Blast. Order yours today!"</p>
+                <h4 class="font-bold text-on-surface mb-6">Philosophy</h4>
+                <p class="text-tertiary text-sm italic">"Freshly made, made with love, served with happiness."</p>
+                <div class="mt-6 flex gap-4">
+                    <span class="material-symbols-outlined text-tertiary">photo_camera</span>
+                    <span class="material-symbols-outlined text-tertiary">near_me</span>
                 </div>
             </div>
         </div>
-        <div class="border-t border-outline-variant/10 py-8 px-8 text-center">
-            <p class="text-body-lg text-tertiary">© <span class="copyright-year">2025</span> Taste &amp; Craving. Street Sweet Editorial.</p>
+        <div
+            class="px-8 py-8 border-t border-outline-variant/10 max-w-7xl mx-auto text-center text-on-surface-variant text-sm">
+            © <span class="copyright-year">2025</span> Taste &amp; Craving. Street Sweet Editorial.
         </div>
     </footer>
 
