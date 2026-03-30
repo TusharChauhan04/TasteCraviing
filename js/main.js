@@ -265,6 +265,7 @@ function renderCartPage() {
 function initMenuFilter() {
     const filterBtns = document.querySelectorAll('[data-filter]');
     const sections   = document.querySelectorAll('[data-category]');
+    const navBar     = document.querySelector('nav[aria-label="Menu categories"]');
 
     if (!filterBtns.length) return;
 
@@ -285,6 +286,20 @@ function initMenuFilter() {
                 sections.forEach(s => {
                     s.style.display = s.dataset.category === target ? '' : 'none';
                 });
+            }
+
+            // Scroll up to the filter bar if we are scrolled past it
+            if (navBar) {
+                const headerOffset = 85; 
+                const elementPosition = navBar.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                if (window.scrollY > offsetPosition) {
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });

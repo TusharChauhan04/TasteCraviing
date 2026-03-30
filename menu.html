@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Taste &amp; Craving | Our Sweet Manifesto</title>
+    <title>Taste &amp; Craviing | Our Sweet Manifesto</title>
     <meta name="description"
-        content="Explore the full Taste & Craving menu â€” Belgian waffles, mini pancakes, shakes, and mocktails. Fresh, hot, and street-style. Order now." />
-    <meta property="og:title" content="Taste & Craving | Our Sweet Manifesto" />
+        content="Explore the full Taste & Craviing menu â€” Belgian waffles, mini pancakes, shakes, and mocktails. Fresh, hot, and street-style. Order now." />
+    <meta property="og:title" content="Taste & Craviing | Our Sweet Manifesto" />
     <meta property="og:description"
         content="Explore our full menu of Belgian waffles, mini pancakes, shakes and mocktails. Fresh, hot, street-style." />
     <meta property="og:type" content="website" />
@@ -32,7 +32,7 @@
     <!-- Mobile Nav Drawer -->
     <div id="mobile-nav" role="navigation" aria-label="Mobile navigation">
         <div class="flex items-center justify-between mb-4">
-            <span class="font-headline font-black text-xl text-primary italic">Taste &amp; Craving</span>
+            <div class="flex items-center gap-3"><img src="images/logo.png" alt="Taste &amp; Craviing" class="h-16 md:h-20 w-auto object-contain scale-[1.1]" /><span class="font-headline font-black text-xl text-primary italic pt-1">Taste &amp; Craviing</span></div>
             <button
                 onclick="document.getElementById('mobile-nav').classList.remove('open'); document.getElementById('mobile-nav-overlay').classList.remove('open'); document.body.style.overflow='';"
                 class="material-symbols-outlined text-on-surface-variant">close</button>
@@ -50,12 +50,7 @@
     <!-- TopNavBar -->
     <header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 z-50 shadow-sm dark:shadow-none">
         <nav class="flex justify-between items-center w-full px-4 md:px-6 py-4 max-w-7xl mx-auto">
-            <a href="index.html"
-                class="text-xl md:text-2xl font-black text-primary dark:text-primary-container flex items-center gap-1.5 md:gap-2">
-                <span class="material-symbols-outlined !text-[20px] md:!text-[24px]"
-                    style="font-variation-settings: 'FILL' 1;">restaurant</span>
-                <span class="font-headline tracking-tight italic">Taste &amp; Craving</span>
-            </a>
+            <a href="index.html" class="flex items-center hover:scale-105 transition-transform duration-300 gap-3 md:gap-4"><img src="images/logo.png" alt="Taste &amp; Craviing Logo" class="h-20 md:h-28 w-auto drop-shadow-sm object-contain scale-[1.1]" /><span class="font-headline italic tracking-tighter text-2xl md:text-3xl font-black text-primary pt-1">Taste &amp; Craviing</span></a>
             <div class="hidden md:flex gap-8 items-center">
                 <a class="text-tertiary dark:text-tertiary-fixed font-medium hover:text-primary transition-all duration-300"
                     href="index.html">Home</a>
@@ -133,7 +128,7 @@
         </nav>
 
         <!-- Menu Sections -->
-        <section class="px-6 py-12 max-w-7xl mx-auto space-y-24">
+        <section class="px-6 py-12 max-w-7xl mx-auto flex flex-col gap-24">
 
             <!-- PANCAKES -->
             <div data-category="pancakes">
@@ -272,7 +267,7 @@
             </div>
 
             <!-- WAFFLES -->
-            <div data-category="waffles" class="pt-12">
+            <div data-category="waffles">
                 <div class="flex items-baseline gap-4 mb-10">
                     <h2 class="font-headline text-4xl font-bold text-primary">Waffles with Ice Cream</h2>
                     <span class="text-tertiary font-medium">Signature Brussels Style</span>
@@ -426,7 +421,7 @@
             </div>
 
             <!-- SHAKES -->
-            <div data-category="shakes" class="pt-12">
+            <div data-category="shakes">
                 <div class="flex items-baseline gap-4 mb-10">
                     <h2 class="font-headline text-4xl font-bold text-primary">Killer Shakes</h2>
                     <span class="text-tertiary font-medium">Thick &amp; Creamy</span>
@@ -499,7 +494,7 @@
             </div>
 
             <!-- MOCKTAILS -->
-            <div data-category="mocktails" class="pt-12">
+            <div data-category="mocktails">
                 <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
                     <div>
                         <h2 class="font-headline text-4xl font-bold text-primary">Street Mocktails</h2>
@@ -592,7 +587,7 @@
             </div>
 
             <!-- COFFEE -->
-            <div data-category="coffee" class="pt-12">
+            <div data-category="coffee">
                 <div class="flex items-baseline gap-4 mb-10">
                     <h2 class="font-headline text-4xl font-bold text-primary">Coffee</h2>
                     <span class="text-tertiary font-medium">Artisan Brews</span>
@@ -602,8 +597,8 @@
                         class="group bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col h-full transition-transform duration-300 hover:-translate-y-2">
                         <div class="relative h-80 overflow-hidden bg-surface-container-low">
                             <img alt="Hazelnut coffee"
-                                class="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn9QdqLJxZttCoBh6RfGDEkkJUlUHrsspnXx0msHp-i_lB2CZ_dLSClbk2AFKar_hlVXX5_QqNADH7qONyRXnp2bo14bG-jxVzV7yI2JTc_fr9EG1NteTucOVSOYHZiB0Drmcd3fvb9mV-8eojm9SnLCmqkRUffzdAFkaOTVNxTgWJ46YDKdJF69VWJnDhtRH8wFRoukRGMb1m-7t9h3Pf3rGYa7Vs4OBJNv5n8RXXC45xpUCfkBbZpi-8d9e9Xk_ocqFZuDcNfPw" />
+                                class="w-full h-full object-contain p-4 object-center transition-transform duration-500 group-hover:scale-110"
+                                src="images/hazelnut_coffee.jpg" />
                         </div>
                         <div class="p-8 flex flex-col flex-grow bg-surface-container-low/30">
                             <div class="flex justify-between items-start mb-4">
@@ -623,7 +618,7 @@
             </div>
 
             <!-- ADD-ONS -->
-            <div data-category="addons" class="pt-12">
+            <div data-category="addons">
                 <div class="flex items-baseline gap-4 mb-10">
                     <h2 class="font-headline text-4xl font-bold text-primary">Add-Ons</h2>
                     <span class="text-tertiary font-medium">Customise Your Order · ₹20 each</span>
@@ -684,7 +679,7 @@
     <footer class="bg-surface-container-low dark:bg-surface-container-lowest mt-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-16 max-w-7xl mx-auto">
             <div class="flex flex-col gap-4">
-                <span class="text-3xl font-black text-tertiary italic">Taste &amp; Craving</span>
+                <div class="flex items-center gap-4 justify-center md:justify-start"><img src="images/logo.png" alt="Taste &amp; Craviing Logo" class="h-24 md:h-32 w-auto scale-[1.1]" /><span class="font-headline font-black text-2xl md:text-3xl text-primary italic">Taste &amp; Craviing</span></div>
                 <p class="text-on-surface-variant text-body-lg">Street Sweet Editorial. Authentic waffles and shakes
                     born on the pavement.</p>
                 <div class="flex gap-4">
@@ -718,8 +713,8 @@
                     </li>
                     <li class="flex items-center gap-2 text-tertiary">
                         <span class="material-symbols-outlined text-sm">mail</span>
-                        <a href="mailto:hello@tastecraving.com"
-                            class="hover:text-primary transition-colors">hello@tastecraving.com</a>
+                        <a href="mailto:hello@tastecraviing.com"
+                            class="hover:text-primary transition-colors">hello@tastecraviing.com</a>
                     </li>
                     <li class="flex items-center gap-2 text-tertiary">
                         <span class="material-symbols-outlined text-sm">location_on</span>
@@ -738,7 +733,7 @@
         </div>
         <div
             class="px-8 py-8 border-t border-outline-variant/10 max-w-7xl mx-auto text-center text-on-surface-variant text-sm">
-            © <span class="copyright-year">2025</span> Taste &amp; Craving. Street Sweet Editorial.
+            © <span class="copyright-year">2025</span> Taste &amp; Craviing. Street Sweet Editorial.
         </div>
     </footer>
 
