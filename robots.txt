@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow cart from indexing (dynamic session pages)
+Disallow: /cart.html
+
+# Sitemap location
+Sitemap: https://www.tastecraviing.com/sitemap.xml
