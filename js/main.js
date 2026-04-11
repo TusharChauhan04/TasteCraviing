@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountdownTimers();
     initToast();
     initScrollAnimations();
+    initFunctionalButtons();
 
     // Cart page — only runs if we're on cart.html
     if (document.getElementById('cart-page-root')) {
@@ -122,11 +123,12 @@ function getCartCount() {
 function updateCartBadge() {
     const count = getCartCount();
     document.querySelectorAll('.cart-badge').forEach(badge => {
-        badge.textContent = count;
         if (count > 0) {
+            badge.textContent = count;
             badge.classList.remove('hidden');
             badge.classList.add('flex');
         } else {
+            badge.textContent = '0';
             badge.classList.add('hidden');
             badge.classList.remove('flex');
         }
@@ -342,9 +344,11 @@ function initCountdownTimers() {
         const el = document.getElementById(id);
         if (!el) return;
 
-        let remaining = parseInt(localStorage.getItem(key)) || initial;
+        // Reset if it's been too long or if finished
+        let savedTime = localStorage.getItem(key);
+        let remaining = (savedTime !== null) ? parseInt(savedTime) : initial;
 
-        function tick() {
+        const tick = () => {
             if (remaining <= 0) {
                 el.textContent = 'Offer Ended';
                 el.classList.add('opacity-40', 'line-through');
@@ -356,10 +360,13 @@ function initCountdownTimers() {
             el.textContent = `${h}:${m}:${s}`;
             remaining--;
             localStorage.setItem(key, remaining);
-        }
+        };
 
         tick();
-        setInterval(tick, 1000);
+        const interval = setInterval(() => {
+            if (remaining <= 0) clearInterval(interval);
+            tick();
+        }, 1000);
     });
 }
 
@@ -450,5 +457,33 @@ function initScrollAnimations() {
 
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
+    });
+}
+
+/* ============================================================
+   10. FUNCTIONAL BUTTONS (Offers Page, etc.)
+   ============================================================ */
+function initFunctionalButtons() {
+    // Notify Me Button
+    document.querySelectorAll('.notify-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.disabled = true;
+            btn.textContent = 'Notification Set!';
+            btn.classList.add('opacity-70');
+            showToast('Sweet! We will notify you when the festival launches. 🥭');
+        });
+    });
+
+    // Handle internal page smooth scrolls if not handled by CSS
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
 }

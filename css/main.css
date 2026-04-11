@@ -61,6 +61,68 @@
     box-shadow: 0 0 32px 0 rgba(176, 0, 74, 0.15);
 }
 
+.glowing-btn {
+    position: relative;
+    background: #b0004a;
+    box-shadow: 0 0 20px rgba(176, 0, 74, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+}
+
+.glowing-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 30px rgba(176, 0, 74, 0.6);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.glowing-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 35px rgba(176, 0, 74, 0.7);
+}
+
+.glowing-btn:hover::after {
+    opacity: 1;
+}
+
+.glowing-btn {
+    animation: dreamy-glow 3s infinite;
+}
+
+@keyframes dreamy-glow {
+    0% { box-shadow: 0 0 15px rgba(176, 0, 74, 0.4); }
+    50% { box-shadow: 0 0 30px rgba(176, 0, 74, 0.7); }
+    100% { box-shadow: 0 0 15px rgba(176, 0, 74, 0.4); }
+}
+
+/* ----------------------------------------------------------
+   4b. GLOWING TAG UTILITY
+   Used for category highlights in menu.html.
+   ---------------------------------------------------------- */
+.glowing-tag {
+    position: relative;
+    background: #b0004a !important;
+    color: white !important;
+    box-shadow: 0 0 20px rgba(176, 0, 74, 0.5);
+    animation: tag-dreamy-glow 3s infinite;
+    transition: all 0.3s ease;
+}
+
+.glowing-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(176, 0, 74, 0.8);
+}
+
+@keyframes tag-dreamy-glow {
+    0% { box-shadow: 0 0 10px rgba(176, 0, 74, 0.3); }
+    50% { box-shadow: 0 0 25px rgba(176, 0, 74, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(176, 0, 74, 0.3); }
+}
+
 /* ----------------------------------------------------------
    5. GLASS HEADER
       Source: about.html + contact.html (identical)
