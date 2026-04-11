@@ -780,26 +780,37 @@
         <!-- Animated Offers Banner -->
         <section class="px-6" aria-label="Special weekend offer and promotion">
             <div
-                class="max-w-7xl mx-auto bg-gradient-to-r from-primary-container to-primary rounded-xl overflow-hidden py-12 px-12 relative">
-                <div
-                    class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl">
-                </div>
-                <div class="relative z-10 flex flex-col md:flex-row justify-between items-center text-on-primary gap-8">
-                    <div class="text-center md:text-left">
-                        <span
-                            class="bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1 rounded-full font-bold text-sm mb-4 inline-block">STREET
-                            SPECIAL</span>
-                        <h2 class="text-4xl md:text-5xl font-black font-headline mb-2 uppercase tracking-tight">Buy 2
-                            Waffles & Get 1 Mocktail <span class="text-tertiary-fixed">FREE</span></h2>
-                        <p class="text-on-primary/80 font-medium">Valid all weekends at all our urban hubs in Ghaziabad.
-                            Grab this dessert deal before it's gone!</p>
+                class="max-w-7xl mx-auto bg-gradient-to-r from-primary-container to-primary rounded-2xl overflow-hidden relative shadow-2xl">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Text Content -->
+                    <div class="flex-1 p-8 md:p-16 z-10 space-y-6">
+                        <span class="bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-black text-xs uppercase tracking-[0.2em] shadow-lg">STREET SPECIAL</span>
+                        <h2 class="text-4xl md:text-6xl font-black font-headline text-on-primary leading-[1.1] uppercase tracking-tighter">
+                            Buy 2 Waffles <br /> 
+                            <span class="text-tertiary-fixed italic">+ 1 Mocktail</span> <br /> 
+                            <span class="text-white">FREE</span>
+                        </h2>
+                        <p class="text-on-primary/90 font-medium text-lg leading-relaxed max-w-sm">
+                            The perfect urban pairing. Valid every weekend at all Taste & Craviing hubs.
+                        </p>
+                        <div class="pt-4">
+                            <a href="offers.html"
+                                class="inline-block bg-white text-primary px-10 py-4 rounded-full font-black text-lg hover:scale-105 active:scale-95 transition-all shadow-xl hover:shadow-primary/40"
+                                aria-label="Claim weekend waffle offer">
+                                Claim Deal
+                            </a>
+                        </div>
                     </div>
-                    <a href="offers.html"
-                        class="bg-surface text-primary px-10 py-5 rounded-full font-black text-xl hover:scale-105 transition-transform whitespace-nowrap"
-                        aria-label="Claim weekend waffle offer">
-                        Claim Now
-                    </a>
+                    <!-- Image Content -->
+                    <div class="w-full md:w-[45%] h-64 md:h-[500px] relative overflow-hidden">
+                        <img src="images/waffle_mocktail_promo.jpg" 
+                            alt="Waffle and Mocktail Offer - Street Sweet Pairing" 
+                            class="w-full h-full object-cover md:object-[center_right] group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-container/40 to-transparent md:hidden"></div>
+                    </div>
                 </div>
+                <!-- Decorative Circles -->
+                <div class="absolute top-0 right-1/2 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 blur-3xl pointer-events-none"></div>
             </div>
         </section>
 
