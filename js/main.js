@@ -31,9 +31,110 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cart page — only runs if we're on cart.html
     if (document.getElementById('cart-page-root')) {
         initCartPage();
+        initCheckout();
     }
 
 });
+
+/* ============================================================
+   11. CHECKOUT MODAL & ORDER FLOW
+   ============================================================ */
+function initCheckout() {
+    const modal       = document.getElementById('checkout-modal');
+    const container   = id => document.getElementById(id);
+    const openBtn     = container('open-checkout-btn');
+    const closeBtn    = container('close-checkout-btn');
+    const overlay     = container('checkout-modal-overlay');
+    const modalCont   = container('modal-container');
+    const form        = container('checkout-form');
+
+    if (!modal || !openBtn) return;
+
+    const openModal = () => {
+        if (cartItems.length === 0) {
+            showToast('Your cart is empty! 🛒', 'error');
+            return;
+        }
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modalCont.classList.remove('scale-95', 'opacity-0');
+            modalCont.classList.add('scale-100', 'opacity-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        modalCont.classList.add('scale-95', 'opacity-0');
+        modalCont.classList.remove('scale-100', 'opacity-100');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 500);
+    };
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn?.addEventListener('click', closeModal);
+    overlay?.addEventListener('click', closeModal);
+
+    // Form Submission
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name    = container('cust-name').value.trim();
+        const phone   = container('cust-phone').value.trim();
+        const address = container('cust-address').value.trim();
+
+        if (!name || !phone || !address) {
+            showToast('Please fill all details! 📝', 'error');
+            return;
+        }
+
+        processOrder(name, phone, address);
+    });
+}
+
+function processOrder(name, phone, address) {
+    const DELIVERY_FEE = 49;
+    const subtotal = getCartTotal();
+    const total    = subtotal + DELIVERY_FEE;
+    const items    = cartItems.map(i => `${i.qty}x ${i.name} (₹${(i.price * i.qty).toFixed(0)})`).join('\n');
+
+    const message = `*NEW ORDER FROM TASTE & CRAVIING* 🧇\n\n` +
+                    `*Customer:* ${name}\n` +
+                    `*Phone:* ${phone}\n` +
+                    `*Address:* ${address}\n\n` +
+                    `*Items:* \n${items}\n\n` +
+                    `*Subtotal:* ₹${subtotal.toFixed(0)}\n` +
+                    `*Delivery:* ₹${DELIVERY_FEE}\n` +
+                    `*Total Amount:* ₹${total.toFixed(0)}\n\n` +
+                    `Please confirm our order! ✨`;
+
+    // 1. Redirect to WhatsApp
+    const waUrl = `https://wa.me/919560027994?text=${encodeURIComponent(message)}`;
+
+    // 2. Send email to owner (via Formspree)
+    // We do this in the background
+    fetch('https://formspree.io/f/mqaeoryv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name: name,
+            phone: phone,
+            address: address,
+            order: items,
+            total: `₹${total.toFixed(0)}`,
+            _subject: `New Order from ${name} (₹${total.toFixed(0)})`
+        })
+    }).catch(err => console.error('Formspree error:', err));
+
+    showToast('Redirecting to WhatsApp... 🚀');
+    
+    setTimeout(() => {
+        // Clear cart after order
+        clearCart();
+        window.location.href = waUrl;
+    }, 1500);
+}
 
 /* ============================================================
    1. AUTO COPYRIGHT YEAR
@@ -324,6 +425,13 @@ function initContactForm() {
         if (!name)    { showToast('Please enter your name 😊', 'error'); return; }
         if (!phone)   { showToast('Please enter your phone number 📞', 'error'); return; }
         if (!message) { showToast('Please write a message 💬', 'error'); return; }
+
+        // Send to Formspree for email notification
+        fetch('https://formspree.io/f/mqaeoryv', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, phone, message, _subject: `Contact Form: ${name}` })
+        }).catch(err => console.error('Formspree error:', err));
 
         form.reset();
         showToast("Message sent! We'll craving-back soon 🧇");
