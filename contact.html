@@ -281,16 +281,26 @@
 
     <main class="max-w-7xl mx-auto px-6 py-12">
         <!-- Hero Header -->
-        <header class="mb-16 space-y-4">
-            <h1
-                class="font-headline font-black text-5xl md:text-8xl text-primary tracking-tighter leading-[1.1] md:leading-none">
-                Let's Talk <br /> <span class="text-tertiary italic">Sweet Somethings</span>
-            </h1>
-            <p class="text-on-surface-variant text-xl max-w-2xl font-medium">
-                Got a craving or a question? Reach out to Ghaziabad's favorite AI-powered dessert editorial. We're here
-                to serve your indulgence with the best waffles, pancakes, and loaded shakes in Sector 18, Kavi Nagar.
-            </p>
-        </header>
+        <section class="pb-16" aria-labelledby="contact-hero-heading">
+            <div class="relative overflow-hidden rounded-xl bg-surface-container-low p-8 md:p-16">
+                <div class="relative z-10 max-w-2xl">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-md font-bold mb-6">GET
+                        IN TOUCH</span>
+                    <h1 id="contact-hero-heading"
+                        class="font-headline text-5xl md:text-7xl font-black text-primary leading-[1.1] md:leading-none tracking-tighter mb-6">
+                        Let's Talk <br /> <span class="text-on-surface">Sweet Somethings.</span></h1>
+                    <p class="text-body-lg text-on-surface-variant max-w-md">Got a craving or a question? Reach out to
+                        Ghaziabad's favorite dessert destination. We're here to serve your indulgence with the best waffles,
+                        pancakes, and loaded shakes in Sector 18, Kavi Nagar.</p>
+                </div>
+                <!-- Decorative element -->
+                <div class="absolute -right-20 -top-20 w-80 h-80 bg-primary opacity-5 rounded-full blur-3xl"></div>
+                <div class="absolute -right-10 bottom-0 w-64 h-64 opacity-20">
+                    <span class="material-symbols-outlined text-[12rem] text-primary">contact_support</span>
+                </div>
+            </div>
+        </section>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <!-- Contact Form Section -->
